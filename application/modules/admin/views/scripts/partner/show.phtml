@@ -1,0 +1,154 @@
+<?php echo $this->headScript()->prependFile($this->baseUrl().'/templates/admin/js/process.js'); ?>
+<?php  echo $this->headScript()->prependFile($this->baseUrl().'/templates/admin/js/jquery.js'); ?>
+<script type="text/javascript">
+function active(id){
+	var act = active;
+	var src = document.getElementById('u'+id);	
+	$.ajax({
+	  url: "<?php echo $this->url(array('module'=>'admin','controller'=>'partner','action'=>'active'));  ?>",
+	  context: document.body,
+	  type: "post",
+	  data: "id=" + id ,
+	  success: function(data){
+	   	if(data == "1"){
+	   		src.innerHTML = '<span class="state publish"></span>';
+	   	} else if(data == "0") {
+	   		src.innerHTML = '<span class="state unpublish"></span>';
+	   	}
+	  }
+	});
+}
+</script>
+
+<div id="toolbar-box">
+<div class="t">
+<div class="t">
+<div class="t"></div>
+</div>
+</div>
+<div class="m">
+<div id="toolbar" class="toolbar-list">
+<ul>
+	<li id="toolbar-new" class="button"><a class="toolbar"
+		href="<?php echo $this->url(array('module'=>'admin','controller'=>'partner', 'action'=>'new'));?>">
+	<span class="icon-32-new"> </span> Thêm </a></li>
+
+	<li id="toolbar-edit" class="button"><a class="toolbar"
+		onclick="submit('<?php echo $this->url(array('module'=>'admin', 'controller'=>'partner', 'action'=>'new'));?>',1);"
+		href="#"> <span class="icon-32-edit"> </span> Sửa </a></li>
+	<li class="divider"></li>
+
+	<li id="toolbar-trash" class="button"><a class="toolbar"
+		onclick="submit('<?php echo $this->url(array('module'=>'admin', 'controller'=>'partner', 'action'=>'delete'));?>',0)"
+		href="#"> <span class="icon-32-trash"> </span> Xóa </a></li>
+
+</ul>
+<div class="clr"></div>
+</div>
+<div class="pagetitle icon-48-article">
+<h2>Quản lý intro</h2>
+</div>
+<div class="clr"></div>
+</div>
+<div class="b">
+<div class="b">
+<div class="b"></div>
+</div>
+</div>
+</div>
+
+<!-- Nội dung  -->
+
+
+
+<div id="element-box">
+<div class="t">
+<div class="t">
+<div class="t"></div>
+</div>
+</div>
+<div class="m">
+
+<form id="adminForm" name="adminForm" method="post" action="">
+
+
+
+<table class="adminlist">
+	<thead>
+		<tr>
+			<th width="1%"><input type="checkbox" onclick="checkAll(this);"
+				value="" name="checkall-toggle"></th>
+			<th width="25%">Tên công ty / Tổ chức</th>	
+			<th width="20%">Liên kết</th>	
+			<th width="10%">Logo</th>
+					
+			<th width="5%">Active</th>
+			<th width="5%">Id</th>
+
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td colspan="15">
+				<div class="container">
+					<?php echo $this->paginationControl($this->pages,'Sliding','partials/pagination_control.phtml');?>
+				</div>
+			</td>
+		</tr>
+	</tfoot>
+	<tbody>
+	
+	<?php
+	$index = 0;	
+	foreach ($this->pages as $partner):?>
+		<tr class="row<?php echo ($index%2==0) ? '0':'1'; ?>">
+			<td class="center"><input type="checkbox"
+				title="Đánh dấu dòng <?php echo $index;?>"
+				onclick="isChecked(this.checked);" value="<?php echo $partner['id']; ?>"
+				name="cid[]" id="cb<?php echo $index; ?>" /></td>
+			<td><a
+				href="<?php echo $this->url(array('module'=>'admin', 'controller'=>'partner', 'action'=>'new', 'id'=> $partner['id']),'default',true);?>">
+				<?php echo $partner['name'];?></a></td>		
+			<td ><a href="<?php echo $partner['link'];?>" target="_bank"><?php echo $partner['link'];?></a></td>
+			
+			<td class="center">
+			<?php 
+				if($partner['image'] != null)
+					echo '<img src="'.$this->baseUrl().'/upload/logos/'.$partner['image'].'" width="100" />';
+			?>
+			</td>	
+
+			
+			<td class="center">
+			<?php if ($partner['active']):?> <a
+				class="jgrid hasTip" id="u<?php echo $partner['id'];?>" href="#javascript::void(0)"
+				onclick="active('<?php echo $partner['id'];?>')" title=""><span
+				class="state publish"></span></a> <?php else:?> <a
+				class="jgrid hasTip" href="#javascript::void(0)" id="u<?php echo $partner['id'];?>"
+				onclick="active('<?php echo $partner['id'];?>')" title=""><span
+				class="state unpublish"></span></a> <?php endif;?>			
+			</td>
+			<td class="center"><?php echo $partner['id'];?></td>
+		</tr>
+		<?php
+		$index++;
+		endforeach;?>
+		
+	</tbody>
+</table>
+
+<div>
+<input type="hidden" value="0" name="boxchecked">
+<div class="clr"></div>
+</div>
+</form>
+
+
+
+</div>
+<div class="b">
+<div class="b">
+<div class="b"></div>
+</div>
+</div>
+</div>

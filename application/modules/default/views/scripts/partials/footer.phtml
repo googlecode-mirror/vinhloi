@@ -1,0 +1,6 @@
+
+<marquee width="99%" onmouseout="start()" onmouseover="stop()" style="margin-right: 10px;">.
+<?php foreach ($this->listPartner as $partner):?>
+<a target="_blank" href="<?php echo $partner['link'] ?>"><img height="60" style="margin-top: 5px;" alt="<?php echo $partner['name'] ?>" src="<?php echo $this->baseUrl().'/upload/logos/'.$partner['image'] ?>"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<?php endforeach;?>
+</marquee>

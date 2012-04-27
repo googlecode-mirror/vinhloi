@@ -1,0 +1,110 @@
+
+<script type="text/javascript">
+function submitSaveNew(opt) {
+	var f = document.adminForm;
+	
+	if (f.password.value == f.repassword.value) {
+		if(opt == 0) {
+			f.savenew.value = 1;	
+			f.submit();
+		} else {
+			f.submit();
+		}
+	} else {
+		alert('Nhập lại mật khẩu không đúng!');
+	}
+}
+</script>
+
+
+<div id="toolbar-box">
+	<div class="t">
+		<div class="t">
+			<div class="t"></div>
+		</div>
+	</div>
+	<div class="m">
+		<div id="toolbar" class="toolbar-list">
+			<ul>
+				<li id="toolbar-apply" class="button"><a class="toolbar"
+					onclick="submitSaveNew(1);" href="#"> <span class="icon-32-apply">
+					</span> Lưu </a></li>
+
+				<li id="toolbar-save-new" class="button"><a class="toolbar" href="#">
+						<span class="icon-32-save-new" onclick="submitSaveNew(0);"> </span>
+						Lưu &amp; Thêm </a></li>
+
+				<li id="toolbar-cancel" class="button"><a class="toolbar"
+					href="<?php echo $this->url(array('module'=>'admin','controller'=>'user','action'=>'show'));?>">
+						<span class="icon-32-cancel"> </span> Thoát </a></li>
+
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="pagetitle icon-48-article">
+			<h2>QL user : Thêm và cập nhật</h2>
+		</div>
+		<div class="clr"></div>
+	</div>
+	<div class="b">
+		<div class="b">
+			<div class="b"></div>
+		</div>
+	</div>
+</div>
+
+<!-- content -->
+
+<div id="element-box">
+	<div class="t">
+		<div class="t">
+			<div class="t"></div>
+		</div>
+	</div>
+	<div class="m">
+
+		<form class="form-validate" id="item-form" name="adminForm"
+			method="post"
+			action="<?php echo $this->url(array('controller'=>'user', 'module'=>'admin', 'action'=>'save'),'default',true); ?>">
+			<div class="width-100 fltlft">
+				<fieldset class="adminform">
+					<legend>User</legend>
+					<ul class="adminformlist">
+						<li><label title="" class="hasTip">Tên người dùng<span
+								class="star">&nbsp;*</span> </label> <input type="text"
+							size="65" class="inputbox "
+							value="<?php if($this->user) echo $this->user['username'];?>"
+							id="username" name="username" <?php if($this->user) echo 'readonly=readonly'?> autocomplete="off"></li>
+
+						<li><label title="" class="hasTip">Mật khẩu</label> <input
+							type="password" size="65" class="inputbox"
+							value=""
+							id="password" name="password" autocomplete="off"></li>
+
+						<li><label title="" class="hasTip">Nhập lại mật khẩu</label> <input
+							type="password" size="65" class="inputbox" value=""
+							id="repassword" name="repassword"></li>
+						<li><label title="" class="hasTip">Email</label> <input
+							type="text" size="65" class="inputbox"
+							value="<?php if($this->user) echo $this->user['email'];?>"
+							id="email" name="email"></li>
+
+
+					</ul>
+					<div class="clr"></div>
+				</fieldset>
+
+			</div>
+			<input type="hidden" value="0" name="savenew" /> <input type="hidden"
+				value="<?php if($this->user) echo $this->user['id'];?>" name="id" />
+		</form>
+	</div>
+
+	<div class="clr"></div>
+</div>
+<div class="b">
+	<div class="b">
+		<div class="b"></div>
+	</div>
+</div>
+

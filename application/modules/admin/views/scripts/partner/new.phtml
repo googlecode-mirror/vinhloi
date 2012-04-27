@@ -1,0 +1,139 @@
+<?php
+echo $this->headScript()->prependFile($this->baseUrl().'/templates/admin/js/tinymce/jscripts/tiny_mce/tiny_init_mini.js')
+->prependFile($this->baseUrl().'/templates/admin/js/tinymce/jscripts/tiny_mce/tiny_mce.js')
+->prependFile($this->baseUrl().'/templates/admin/js/decodeslug.js');
+?>
+
+<script type="text/javascript">
+String.prototype.trim = function () {
+    return this.replace(/^\s*/, "").replace(/\s*$/, "");
+};
+
+function checkNum(num) {
+	if(isNaN(num.value)) {
+		alert('Vui lòng nhập số!');
+		num.value = '';	
+	}
+}
+
+function check(f) {
+	if(f.name.value == '') return false;	
+	if(f.link.value == '') return false;
+	return true;
+}
+function submitForm(opt) {
+	var f = document.adminForm;
+	if(check(f)) {
+		if(opt == 0) {
+			f.savenew.value = 1;			
+		}		
+		f.submit();
+	} else {
+		alert('Vui lòng nhập các dữ liệu có dấu (*)!');
+	}
+}
+</script>
+
+<div id="toolbar-box">
+	<div class="t">
+		<div class="t">
+			<div class="t"></div>
+		</div>
+	</div>
+	<div class="m">
+		<div id="toolbar" class="toolbar-list">
+			<ul>
+				<li id="toolbar-apply" class="button"><a class="toolbar"
+					onclick="submitForm(1);" href="#"> <span class="icon-32-apply"> </span>
+						Lưu </a></li>
+
+				<li id="toolbar-save-new" class="button"><a class="toolbar" href="#">
+						<span class="icon-32-save-new" onclick="submitForm(0);"> </span>
+						Lưu &amp; Thêm </a></li>
+
+				<li id="toolbar-cancel" class="button"><a class="toolbar"
+					href="<?php echo $this->url(array('module'=>'admin','controller'=>'partner','action'=>'show'));?>">
+						<span class="icon-32-cancel"> </span> Thoát </a></li>
+
+
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="pagetitle icon-48-article">
+			<h2>Quản lý đối tác</h2>
+		</div>
+		<div class="clr"></div>
+	</div>
+	<div class="b">
+		<div class="b">
+			<div class="b"></div>
+		</div>
+	</div>
+</div>
+
+<!-- content -->
+
+<div id="element-box">
+	<div class="t">
+		<div class="t">
+			<div class="t"></div>
+		</div>
+	</div>
+	<div class="m">
+
+		<form class="form-validate" id="item-form" name="adminForm"
+			method="post" enctype="multipart/form-data"
+			action="<?php echo $this->url(array('controller'=>'partner', 'module'=>'admin', 'action'=>'save'),'default',true); ?>">
+			<div class="width-100 fltlft">
+				<fieldset class="adminform">
+					<legend>Đối tác</legend>
+					<ul class="adminformlist">
+
+						<li><label title="" class="hasTip" for="name" id="jform_title-lbl">Tên
+								hiển thị<span class="star">&nbsp;*</span> </label> <input
+							type="text" size="50" class="inputbox" onkeydown=""
+							value="<?php if($this->partner) echo $this->partner['name'];?>"
+							id="name" name="name"></li>
+						
+						<li><label title="" class="hasTip" for="link" id="link-title">Liên
+								kết<span class="star">&nbsp;*</span> </label> <input type="text"
+							size="50" class="inputbox"
+							value="<?php if($this->partner) echo $this->partner['link'];?>"
+							id="link" name="link"></li>
+						<li><label title="" class="hasTip" for="logo" id="icon-title">Logo
+								(Size 100 x 50)<span class="star">&nbsp;*</span> </label> <input
+							type="file" size="35" class="inputbox" id="logo" name="logo"></li>
+						<li><label title="" class="hasTip" for="icon" id="icon-title"></label>
+						<?php
+						if($this->partner && $this->partner['image'] != null):
+						echo '<img src="'.$this->baseUrl().'/upload/logos/'.$this->partner['image'].'" width="120" />';
+						endif;
+						?>
+						</li>						
+						<li><label title="" class="hasTip" for="sort" id="icon-title">Active<span
+								class="star">&nbsp;*</span> </label> <input type="checkbox"
+							id="active" name="active" value="1"
+							<?php if($this->partner && $this->partner['active'] == 1) echo 'checked=checked'?>>
+						</li>
+					</ul>							
+
+
+					<div class="clr"></div>
+
+				</fieldset>
+
+			</div>
+			<div class="clr"></div>
+			<input type="hidden" value="0" name="savenew" /> <input type="hidden"
+				value="<?php if($this->partner) echo $this->partner['id'];?>" name="id" />
+		</form>
+	</div>
+	<div class="b">
+		<div class="b">
+			<div class="b"></div>
+
+			<div class="clr"></div>
+		</div>
+
+	</div>
+</div>

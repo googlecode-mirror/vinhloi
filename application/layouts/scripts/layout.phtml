@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="FOLLOW,INDEX" />
+        <title>Công ty cổ phần IMED</title>
+        <?php
+        echo $this->headTitle();
+        echo $this->headMeta();
+        echo $this->headLink()->prependStylesheet(TEMPLATE_URL . '/default/css/style.css');
+        echo $this->headScript();
+        ?>
+
+        <!-- CSS -->
+        <link href="<?php echo TEMPLATE_URL ?>/default/css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="<?php echo TEMPLATE_URL ?>/default/css/general.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="<?php echo TEMPLATE_URL ?>/default/css/toppage.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="<?php echo TEMPLATE_URL ?>/default/css/portal_thethao.css" media="screen" rel="stylesheet" type="text/css" />
+
+        <!-- JS -->
+        <script language="javascript" type="text/javascript" src="<?php echo TEMPLATE_URL ?>/default/js/lib/jquery.min.js.js"></script>
+        <script language="javascript" type="text/javascript" src="<?php echo TEMPLATE_URL ?>/default/js/common.js"></script>
+        <script language="javascript" type="text/javascript" src="<?php echo TEMPLATE_URL ?>/default/js/menu.js"></script>
+        <script language="javascript" type="text/javascript" src="<?php echo TEMPLATE_URL ?>/default/js/slides.min.jquery.js"></script>
+
+    </head>
+    <body>
+        <?php echo $this->render('common/topbar.phtml'); ?>
+        <div id="wrapper-container">
+            <div id="container">
+                <div id="wrapper_header">
+                    <?php echo $this->render('common/header.phtml'); ?>
+                    <div id="menu_portal">
+                        <?php echo $this->render('common/menu_site.phtml'); ?>
+                        <?php echo $this->render('common/sub_menu_site.phtml'); ?>
+                    </div>
+                    <?php echo $this->render('common/breackcumb.phtml'); ?>
+                </div>
+                <div id="wrapper_container"> 
+                    <?php echo $this->layout()->content; ?>
+                </div>
+                <div id="wrapper_footer">
+                    <?php echo $this->render('common/footer.phtml'); ?>
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
+</html>

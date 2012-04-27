@@ -1,0 +1,71 @@
+<?php echo $this->doctype() ?>
+<html>
+
+<head>
+<?php
+echo $this->headTitle();
+echo $this->headMeta();
+echo $this->headLink()->prependStylesheet($this->baseUrl().'/static/admin/css/template.css')
+					  ->prependStylesheet($this->baseUrl().'/static/admin/css/rounded.css');
+echo $this->headScript();					  
+?>
+</head>
+<body id="minwidth-body">
+<div id="border-top" class="h_blue">
+<div>
+<div> <span
+	class="title"><a href="index.php"></a></span></div>
+</div>
+</div>
+<div id="header-box">
+<div id="module-status"> <span class="logout"><a
+	href="<?php echo $this->url(array('module'=>'admin', 'controller'=>'Auth', 'action'=>'logout'),'default',true);?>">Log
+out</a></span></div>
+<div id="module-menu">
+<ul id="menu">	 
+	<li class="node"><a href="<?php echo $this->url(array('module'=>'admin','controller'=>'user', 'action'=>'index'),'default',true);?>">Users</a>	
+	</li>
+	<li class="node"><a href="<?php echo $this->url(array('module'=>'admin','controller'=>'intro', 'action'=>'index'),'default',true);?>">Quản lý intro</a>
+	<ul>
+		<li class="node"><a class="icon-16-menumgr"
+			href="<?php echo $this->url(array('module'=>'admin','controller'=>'intro', 'action'=>'show'),'default',true);?>">Danh sách Intro</a></li>
+		<li class="node"><a class="icon-16-menumgr"
+			href="<?php echo $this->url(array('module'=>'admin','controller'=>'intro', 'action'=>'new'),'default',true);?>">Thêm mới Intro</a></li>
+	</ul>
+	</li>
+	<li class="node"><a href="<?php echo $this->url(array('module'=>'admin','controller'=>'partner', 'action'=>'index'),'default',true);?>">Quản lý Đối tác</a>
+	<ul>
+		<li class="node"><a class="icon-16-article"
+			href="<?php echo $this->url(array('module'=>'admin','controller'=>'partner', 'action'=>'index'),'default',true);?>">Danh sách đối tác</a>		
+		</li>
+		<li class="node"><a class="icon-16-category"
+			href="<?php echo $this->url(array('module'=>'admin','controller'=>'partner', 'action'=>'index'),'default',true);?>">Thêm đối tác</a>		
+		</li>		
+	</ul>
+	</li>		
+	 	
+</ul>
+
+</div>
+<div class="clr"></div>
+</div>
+<div id="content-box">
+<div class="border">
+<div class="padding">
+	<?php echo $this->layout()->content; ?>
+</div>
+</div>
+</div>
+<div id="border-bottom">
+<div>
+<div></div>
+</div>
+</div>
+
+<div id="footer">
+<p class="copyright"></p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?php /* if ($this->pageCount): ?>
+<div class=”paginationControl”>
+
+<?php if (isset($this->previous)): ?>
+<a href="<?= $this->url(array('page' => $this->previous)); ?>">
+&lt; Previous
+</a> |
+<?php else: ?>
+<span class=”disabled”>&lt; Previous</span> |
+<?php endif; ?>
+
+
+<?php foreach ($this->pagesInRange as $page): ?>
+<?php if ($page != $this->current): ?>
+<a href="<?= $this->url(array('page' => $page)); ?>">
+<?= $page; ?>
+</a> |
+<?php else: ?>
+<?= $page; ?> |
+<?php endif; ?>
+<?php endforeach; ?>
+
+
+<?php if (isset($this->next)): ?>
+<a href="<?= $this->url(array('page' => $this->next)); ?>">
+Next &gt;
+</a>
+<?php else: ?>
+<span class=”disabled”>Next &gt;</span>
+<?php endif; ?>
+</div>
+<?php endif; */?>
+
+<?php /*echo $this->firstItemNumber; ?> - <?php echo $this->lastItemNumber; ?>
+trong <?php //echo $this->totalItemCount; */?>
+
+<?php if ($this->pageCount): ?>
+<div class="pagination">
+<?php if (isset($this->previous)): ?>
+
+<div class="button2-right">
+<div class="start"><a
+	href="<?= $this->url(array('page' => $this->first)); ?>">Bắt đầu</a></div>
+</div>
+<div class="button2-right ">
+<div class="prev"><a
+	href="<?= $this->url(array('page' => $this->previous)); ?>">Lùi</a></div>
+</div>
+<?php else: ?>
+<div class="button2-right off">
+<div class="start"><span>Bắt đầu</span></div>
+</div>
+<div class="button2-right off">
+<div class="prev"><span>Lùi</span></div>
+</div>
+<?php endif; ?>
+
+<div class="button2-left">
+<div class="page"><?php foreach ($this->pagesInRange as $page): ?> <?php if ($page != $this->current): ?>
+<a href="<?php echo $this->url(array('page' => $page)); ?>"> <?php echo $page; ?>
+</a> <?php else: ?> <span> <?php echo $page; ?> </span> <?php endif; ?> <?php endforeach; ?>
+</div>
+</div>
+
+<?php if (isset($this->next)): ?>
+<div class="button2-left">
+<div class="next"><a
+	href="<?php echo $this->url(array('page' => $this->next)); ?>" title="Next">Tiếp</a>
+</div>
+</div>
+<div class="button2-left">
+<div class="end"><a
+	href="<?php echo $this->url(array('page' => $this->last)); ?>" title="Next">Kết thúc</a>
+</div>
+</div>
+<?php else: ?>
+<div class="button2-left off">
+<div class="next"><span>Tiếp</span></div>
+</div>
+<div class="button2-left off">
+<div class="end"><span>Kết thúc</span></div>
+</div>
+<?php endif; ?></div>
+<?php endif; ?>
