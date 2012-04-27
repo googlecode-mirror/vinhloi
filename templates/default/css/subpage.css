@@ -1,0 +1,390 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper-container{
+	background:#090734 url(images/graphics/bg_subpage.jpg) no-repeat center top;
+	float:left;
+}
+.w940{
+	width:940px;
+}
+#container{
+	width:100%;
+}
+#wrapper_header{
+	height:48px;
+	background:url(images/graphics/bg_subpage_1x48.gif) repeat-x left top;
+	margin:0;
+}
+.main_footer{
+	width:980px;
+	margin:0 auto;
+	height:100px;
+}
+.logo_subpage{
+	float:left;
+	margin:10px 0 0 0;
+	display:inline;
+}
+.coppy_right{
+	border:none;
+	width:978px;
+	margin:0 auto;
+	float:none;
+	height:70px;
+	background:#fff;
+	border-right:1px solid #D1D1D1;
+	border-left:1px solid #D1D1D1;
+}
+#subpage{
+	width:940px;
+	border:1px solid #d1d1d1;
+	background:#fff;
+	padding:10px 19px;
+	margin:0 auto;
+}
+.main_header_subpage{
+	width:950px;
+	margin:0 auto;
+	padding:0 0 0 30px;
+}
+.thongtincapdau{
+	background:#F7F7F7 url(images/graphics/bg_1x87.gif) repeat-x bottom left;
+}
+.block_info_name_tiso {
+    padding: 10px 0 0 5px;
+}
+.txt_stadium {
+	background:#f7f7f7;
+	text-transform:uppercase;
+}
+.block_image_daidien{
+	padding:2px 0;
+}
+.block_image_daidien img{
+	border:1px solid #c2c3c4;
+}
+.block_infomation_capdau {
+    padding: 10px 0 20px 160px;
+}
+.block_no1_news{
+	background:none;
+}
+.block_no1_news .content_block {
+    background: url(images/graphics/bg_1x140.gif) repeat-x scroll left top;
+}
+.img_news img{
+	float:left;
+	padding:5px;
+	border:1px solid #e2e2e2;
+	background:#efefef;
+	margin:0;
+}
+.txt_desc_news{
+	font:400 13px tahoma;
+}
+#cate_new_news{
+	margin:10px 0 0 0;
+	display:inline;
+}
+#ketqua_5recent{
+	margin-top:20px;
+}
+#ketqua_cactran .title_cate.black_text,
+#ketqua_5recent .title_cate.black_text {
+    border-bottom: 1px dotted #C2C6C9;
+	border-top:none;
+}
+#ketqua_cactran .title_cate.black_text p,
+#ketqua_5recent .title_cate.black_text p{
+	border:none;
+}
+#ketqua_cactran table .txt_right p{
+	padding:0 10px 0 0;
+}
+#ketqua_5recent .title_cate {
+    border-bottom: medium none;
+}
+#ketqua_5recent #note_kq_rasan li{
+	font-weight:700;
+}
+#ketqua_5recent .top_5recent{
+	margin-top:5px;
+	display:inline;
+	text-transform:uppercase;
+}
+#ketqua_5recent td{
+	padding-right:10px;
+} 
+#cauthutieubieu{
+	margin-top:20px;
+	display:inline;
+}
+#cauthutieubieu .name{
+	text-transform:uppercase;
+}
+#cate_new_news .title_cate{
+	background:none;
+	 border-bottom: 1px solid #C2C6C9;
+	 height:28px;
+}
+#ketqua_cactran .title_cate,
+#ketqua_5recent .title_cate{
+	 border-bottom: 1px solid #C2C6C9;
+	 height:28px;
+}
+#ketqua_cactran .title_cate p,
+#ketqua_5recent .title_cate p,
+#cate_new_news .title_cate .left{
+/*	border-bottom:2px solid #1aa53b;*/
+/*	padding:0 10px;*/
+}
+.club_one .top_5recent{
+	color:#273591;
+}
+.club_two .top_5recent{
+	color:#d40026;
+}
+.top_5recent .bg_left_top{
+	background:#273591;
+}
+.club_two .top_5recent .bg_left_top {
+    background: none repeat scroll 0 0 #d40026;
+}
+.football .title_cate .home{
+	color:#0e3e8e;
+}
+
+.football .title_cate .visit{
+	color:#d40026;
+}
+#dudoanketqua_trandau .block_infomation_capdau .block_info_name_tiso {
+    width: 304px;
+	margin:0 10px;
+	display:inline;
+}
+/*--------------css Dien*/
+#box_join_dudoan_tyso{
+    margin-top:20px;
+}
+#box_join_dudoan_tyso .txt_gray{
+    font-weight:bold;
+    text-decoration:underline;
+}
+#box_join_dudoan_tyso #dudoanketqua_trandau .block_info_name_tiso{
+width:330px;
+height:inherit;
+}
+#dudoanketqua_trandau .block_info_name_tiso input{
+	background:none;
+	border:none;
+	margin:10px 0 0 0;
+	display:inline;
+	font-weight:normal;
+	float:left;
+}
+#dudoanketqua_trandau .block_info_name_tiso input.txt_input{
+	width:120px;
+	float:left;
+	border-top:1px solid #abadb3;
+	border-left:1px solid #e2e3ea;
+	border-bottom:1px solid #e2e3ea;
+	border-right:1px solid #e2e3ea;
+	height:20px;
+	background:white;
+	cursor:inherit;
+	margin:10px 0 0 10px;
+}
+#dudoanketqua_trandau .block_info_name_tiso input.btn_sudoan{
+	background:url(images/buttons/btn_dudoan_2.gif) no-repeat top left;
+	height:22px;
+	cursor:pointer;
+	color:#fff;
+	width:70px;
+	font-weight:bold;
+	margin:10px 0 0 40px;
+	display:inline;
+	text-indent:-99999px;
+	width:71px;
+	height:24px;
+	
+}
+#dudoanketqua_trandau .block_infomation_capdau{
+	background:url(images/graphics/bg_thongtindudoan.gif) repeat-x bottom left;
+	height: 165px;
+    padding: 40px 0 20px;
+}
+#box_join_dudoan_tyso .title_cate{
+	border-bottom:1px dotted #C2C6C9;
+}
+#box_join_dudoan_tyso .home,#box_join_dudoan_tyso .visit{
+	font: 700 12px arial;
+}
+#box_join_dudoan_tyso .home{
+	color:#004f8b;
+}
+#box_join_dudoan_tyso .visit{
+	color:#d40026;
+}
+#dudoanketqua_trandau .block_image.left{
+	padding:0 0 0 10px
+}
+#dudoanketqua_trandau .block_image.right{
+	padding:0 10px 0 0;
+}
+#dudoanketqua_trandau select{
+	width:60px;
+	float:left;
+	margin:0 0 0 10px;
+	display:inline;
+}
+#thamkhao .content_cate{
+	background:url(images/graphics/bg_thongtindudoan.gif) repeat-x bottom left;
+}
+.top3_dudoan .pecent_dudoan .bg_pecent{
+	width:150px;
+}
+.top3_dudoan .pecent_dudoan .tile_cuoc{
+	width:80px;
+}
+.note_bg_icon li span {
+	line-height:0;
+	font-size:0;
+}
+#dudoanketqua_trandau{
+	height:200px;
+}
+.note_bg_icon{
+	float:left;
+	width:100%;
+}
+#box_join_dudoan_tyso .note_bg_icon li{
+	float:left;
+	margin-left:20px;
+	line-height:25px;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:12px;
+}
+.note_bg_icon li span{
+	width:10px;
+	height:10px;
+	margin-top:9px;
+	margin-right:5px;
+	display:block;
+	float:left;
+}
+.note_bg_icon li span#bg_icon_doi_a{
+	background:#9f224e;
+}
+.note_bg_icon li span#bg_icon_doi_b{
+	background:#1aa53b;
+}
+.note_bg_icon li span#bg_icon_hoa{
+	background:#acacac;
+}
+.dudoan_cuabandoc #hinhtron_tk{
+	margin: 0;
+}
+#cate_thongtintrandau #box_comment{
+
+}
+.block_input_comment .input_comment textarea {
+	width:435px;
+}
+#box_comment .title_show {
+	font-size:14px;
+}
+#box_comment .main_show_comment{
+	overflow-y:scroll;
+	height:480px;
+}
+#box_comment .txt_title_comment_detal .home{
+	color:#0e3e8e;
+}
+#box_comment .txt_title_comment_detal .visit{
+	color:#d40026;
+}
+#news_curent{
+	margin: 20px 0 0 0;
+}
+.news_curent_trandau{
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+.news_curent_trandau .right{
+	width: 370px;
+}
+.news_curent_trandau .right a{
+	font-size: 12px;
+	margin-bottom: 5px;
+	display:block;
+}
+.news_curent_trandau .right p{
+	line-height:15px;
+}
+.news_noimages .list_dot_3x3 li{
+	width:100%;
+}
+#doihinhdukien{
+	margin: 20px 0 0 0;
+}
+#doihinhdukien table td{
+	vertical-align: middle;
+	text-align:center;
+}
+#doihinhdukien table{
+	width:100%;
+	margin-top:15px;
+	margin-bottom: 20px;
+}
+.tk_trandau_rasan {
+	padding-top:0px;
+}
+.tk_trandau_right {
+	float:left;
+	margin-left:20px;
+}
+.tk_trandau_left{
+	float:right;
+	margin-right:20px;
+}
+.tk_trandau .bg_top_table {
+	height:25px;
+}
+.tk_trandau .bg_top_table .w190, .tk_trandau .bg_top_table .w50,.tk_trandau .bg_top_table .w70 {
+	line-height:26px;
+}
+.doihinh_dubi{
+	float:left;
+}
+.tk_trandau_left .tk_trandau_rasan,.tk_trandau_right .tk_trandau_rasan{
+	border:none;
+}
+.tk_trandau_right .bg_top_table{
+	border-top: 1px solid #273591;
+}
+.tk_trandau_left .bg_top_table{
+	border-top: 1px solid #DB2118;
+}
+.bg_top_table p{
+	 line-height:26px;
+	 font-weight:bold;
+	 text-shadow: 0px 1px 1px white;
+	 font-size:12px;
+	 padding-left:10px;
+	 color:#333333;
+}
+.doihinh_dubi .tk_cauthu_dubi {
+	margin-bottom:0px;
+}
+.doihinh_dubi .tk_cauthu_dubi {
+	border:none;
+	padding:0px;
+	margin:0px;
+}
+.tk_trandau .w190{
+	width:240px;
+}
+.tk_trandau .w50{
+	width:100px;
+}

@@ -1,0 +1,4 @@
+//Loi ko hien thi anh luc upload
+-tiny_mce.js va tiny_mce_src.js
+relative_urls : 0,//1 
+emove_script_host : 0, //1

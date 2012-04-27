@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* CSS Document */
+/*Search*/
+.icon_view_more_red{
+	background-position: -785px 5px;
+	height:13px;
+	width:7px;
+}
+.bar_info_search{
+	background:url(images/graphics/bg_bar_search_infpo.gif) repeat-x left top;
+	padding:0px 0 0px 20px;
+	width:960px;
+	float:left;
+	font:700 18px/45px arial;
+	height:45px;
+}
+.search_key{
+	color:#9f224e;
+}
+.box_col_300{
+	border-color:#9f224e;
+}
+.title_block .txt_title_left_block{
+	border-color:#9f224e;
+}
+.title_block_search{
+	background:#eeeeee;
+	padding:3px 0 0 0;
+	border-top:1px solid #676767;
+	border-bottom:1px solid #cecece;
+}
+.txt_cate_search{
+	font:400 18px arial;
+	padding:0 0 0 10px;
+}
+.title_block_search select{
+	border:1px solid #e2e3ea;
+	font:700 12px arial;
+}
+.txt_input_search_advane .btn_search{
+	border:none;
+	height:23px;
+	width:21px;
+	background:url(images/icons/icon_thethao_portal.gif) no-repeat  -610px 0;
+	cursor:pointer;
+	float:left;
+}
+.txt_input_search_advane{
+	margin:0 10px 0 0;
+	display:inline;
+}
+.txt_input_search_advane .txt_search{
+	height:13px;
+	padding:5px 0 3px 5px;
+	border-top:1px solid #cfcfcf;
+	border-left:1px solid #cfcfcf;
+	border-bottom:1px solid #cfcfcf;
+	float:left;
+	font:400 11px arial;
+	color:#999999;
+	border-right:none;
+
+}
+.search_cate {
+	padding:5px 0;
+	background:#f8f8f8;
+	border-bottom:1px solid #ececec;
+	margin-bottom:10px;
+	display:inline;
+}
+.search_cate .list_cate li{
+	float:left;
+	padding:0 0 0 10px;
+}
+.search_cate .list_cate li label,.search_cate .list_cate li input{
+	cursor:pointer;
+	float:left;
+}
+.search_cate .list_cate li input{
+	margin:1px 3px 0 0;
+}
+*html .search_cate .list_cate li input{
+	margin:-3px 0 0 0;
+}
+
+*+html .search_cate .list_cate li input{
+	margin:-3px 0 0 0;
+}
+.chose_time{
+	margin:0 10px 0 0;
+	display:inline;
+}
+.chose_time .icon_calenda{
+	margin:0 0 0 5px;
+}
+.block_search{
+	padding:0;
+}
+.block_search_result{
+
+}
+
+.block_search_result li{
+	width:100%;
+	float:left;
+	padding:0 0 10px  0;
+	margin: 0 0 10px 0;
+	display:inline;
+	border-bottom:1px dotted #c2c6c9;
+}
+.block_search_result li.end{
+	margin:0;
+}
+.block_search{
+	width:490px;
+	float:right;
+	padding-bottom:10px;
+}
+.block_search .txt_view_more a{
+	color:#666;
+}
+.block_search .txt_view_more a:hover{
+	color:#3b5998;
+}
+.menu_search_left{
+	float:left;
+	width:150px;
+	display:inline;
+
+}
+.menu_search_left ul{
+	margin:0 0 10px 0;
+	float:left;
+	width:100%;
+		border-bottom:1px solid #d6d6d6;
+}
+.menu_search_left li{
+	border-top:1px solid #d6d6d6;
+	width:150px;
+	float:left;
+}
+.menu_search_left li a{
+	display:block;
+	padding:7px 0 7px 10px;
+	width:140px;
+	float:left;
+	background:#f6f6f6;
+	border-top:1px solid #fff;
+	font:700 12px/12px arial;
+	color:#000;
+}
+.menu_search_left li a .txt_gray{
+	font:400 12px arial;
+}
+.menu_search_left li a:hover{
+	background:#004f8b;
+	color:#fff;
+}
+.menu_search_left li.menu_cap1{
+	background:#eaeaea;
+	color:#333;
+	font:700 14px/14px arial;
+	padding:7px 0 7px 10px;
+	width:140px;
+	color:#999;
+}
+.menu_search_left li.menu_cap1.active a:hover,
+.menu_search_left li.menu_cap1 a:hover,
+.menu_search_left li a:hover span.txt_gray{
+	background:#004f8b;
+	color:#fff;
+}
+.menu_search_left li.active a{
+	background:#9f224e url(images/graphics/bg_active_menu_search.gif) no-repeat 140px top;
+	color:#fff;
+}
+.menu_search_left li.active a:hover{
+	color:#fff;
+}
+.menu_search_left li.menu_top{
+	padding:7px 0 7px 10px;
+	font:700 14px/14px arial;
+	background:#1aa53b;
+	border:none;
+	color:#fff;
+	width:140px;
+	text-transform:uppercase;
+}
+/*End Search*/
+/*search*/
+.chose_search_item{
+	width:130px;
+	float:left;
+	position:relative;
+	padding:0 10px;
+	
+}
+.chose_item{
+	float:left;
+	height:24px;
+	background:url(images/graphics/bg_down_7x4.gif) no-repeat 115px 10px;
+	width:120px;
+	padding:0 0 0 10px;
+	font:700 11px/24px arial;
+	border:1px solid #EEEEEE;
+	cursor:pointer;
+}
+.chose_item.active{
+	background:#fff url(images/graphics/bg_down_7x4.gif) no-repeat 115px 10px;
+	border:1px solid #DBDFE6;
+}
+.search_item{
+	position:absolute;
+	left:10px;
+	top:24px;
+	width:130px;
+	display:none;
+}
+.input_time{
+	padding:5px 0 10px 0;
+}
+.input_time input{
+	font:400 12px arial;
+	border:1px solid #dbdfe6;
+	padding:3px 0 3px 2px;
+	text-align:center;
+	float:left;
+	margin:0 5px 0 0;
+	display:inline;
+	color:#999999;
+}
+.input_time .w25{
+	width:25px;
+}
+.content_search_item{
+	width:122px;
+	float:left;
+	border-bottom:2px solid #9f224e;
+	background:#fff;
+	border-left:1px solid #e2e3ea;
+	border-right:1px solid #e2e3ea;
+	padding-bottom:10px;
+	padding-left:8px;
+}
+.search_cate .txt_search_tag{
+	padding:0 0 0 10px;
+}
+.top_item{
+	width:100%;
+	float:left;
+	padding:5px 0;
+	border-bottom:1px dotted #c2c6c9;
+}
+.top_item b{
+	padding:0 0 0 10px
+}
+.list_item_search{
+	float:left;
+	width:290px;
+	margin:10px 0 0 0;
+	display:inline;
+	background:#fff url(images/graphics/bg_dot_line.gif) repeat-y 145px 0;
+}
+.list_item_search li{
+	width:135px;
+	float:left;
+	padding:5px 0 0 10px;
+}
+/*Block plugin fb*/
+#box_plugin_fb{
+	width:298px;
+	float:left;
+	margin:10px 0 0 0;
+	display:inline;
+	border:1px solid #d5d8de;
+}
+/*End Block plugin fb*/
+#box_chuyenmuckhac.box_col_300{
+	margin:0;
+} 
+#box_chuyenmuckhac .news_images{
+	padding:10px;
+}
+#box_chuyenmuckhac .news_images img{
+	margin:0;
+}
+#box_chuyenmuckhac .title_block{
+	border-top:1px dotted #c2c6c9;
+}
+#box_chuyenmuckhac .title_block .txt_view_more a {
+    color: #666666;
+}
+#box_chuyenmuckhac .title_block .txt_view_more a:hover{
+	color:#3b5998;
+}
+.bar_main_search{
+	width:100%;
+	float:left;
+	padding-bottom:10px;
+}
+.bor_search{
+	border:1px solid #d9d9d9;
+	width:387px;
+	float:left;
+}
+.bor_search input.txt_input_search{
+	border:3px solid #f1f1f1;
+	background:#fff url(images/graphics/img_search.gif) no-repeat 3px 3px;
+	float:left;
+	width:351px;
+	padding:4px 0 4px 30px;
+	height:13px;
+	font:400 12px arial;
+	color:#999999;
+}
+.btn_main_search{
+	width:95px;
+	height:29px;
+	color:#fff;
+	font:700 13px arial;
+	background:#9d1e44;
+	cursor:pointer;
+	border:none;
+	text-transform:uppercase;
+	float:right;
+}
+.btn_submit_time{
+	width:50px;
+	height:20px;
+	color:#fff;
+	font:700 11px arial;
+	background:#9d1e44;
+	cursor:pointer;
+	border:none;
+	text-transform:uppercase;
+	float:right;
+	margin:0 10px 0 0;
+	display:inline;
+}
+.time_search_result{
+	font:700 18px arial;
+	color:#999;
+	padding:0px 0 10px 0;
+	width:100%;
+	float:left;
+}
